@@ -9,7 +9,7 @@ RUN mkdir /data && cd /data && curl -C - "https://s3.amazonaws.com/files.molo.ch
 RUN /data/moloch/bin/moloch_update_geo.sh
 
 RUN mkdir /arkime && cd /arkime && mkdir bin log switch
-ADD ./arkime/scripts /arkime/bin
+ADD ./scripts /arkime/bin
 RUN chmod 755 /arkime/bin/*.sh
 
 ENV ARKIME_DIR "/data/moloch"
